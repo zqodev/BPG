@@ -1,6 +1,5 @@
 import os
 import subprocess
-import importlib
 
 from misc.string import ascii_lowercase, ascii_uppercase, ascii_number, ascii_special
 from pystyle import Colors, Colorate
@@ -10,23 +9,23 @@ from sys import exit, executable
 
 def header() -> str:
     head = """                                                       
-                 =+--:...          
-                .**+++++++=:       
-                 #-  ...:-=++=:    
-                .#.        .-=+=.  
-                -+            :=+- 
-                *-              -+:
-              :*-                :=
-             =+.                  .
-           .+=                     
-          -#:                      
-        .*+                        
-       :#-                         
-      =#.                          
-    -#+.                           
-   +%-                             
- :##:                              
-=%+                                                                                    
+                         =+--:...          
+                        .**+++++++=:       
+                         #-  ...:-=++=:    
+                        .#.        .-=+=.  
+                        -+            :=+- 
+                        *-              -+:
+                      :*-                :=
+                     =+.                  .
+                   .+=                     
+                  -#:                      
+                .*+                        
+               :#-                         
+              =#.                          
+            -#+.                           
+           +%-                             
+         :##:                              
+        =%+                                                                                    
     """
 
     return Colorate.Horizontal(Colors.black_to_white, head)
@@ -81,7 +80,7 @@ def clear() -> None:
         os.system("clear")
 
 
-def install_dependencies():
+def install_dependencies() -> None:
     try:
         import pystyle
     except ModuleNotFoundError:

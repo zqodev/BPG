@@ -5,7 +5,7 @@ install_dependencies()
 
 
 class BPS:
-    def __init__(self, choices):
+    def __init__(self, choices: tuple):
         self.password = generate_password(choices[1], choices[2], choices[3], choices[4], choices[5])
         self.show()
 
